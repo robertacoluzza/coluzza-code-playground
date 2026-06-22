@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Roberta Coluzza | Portfolio</title>
+  <style>
+    :root {
+      --bg-main: #f8fafc;
+      --bg-card: #ffffff;
+      --text-main: #0f172a;
+      --text-muted: #475569;
+      --accent-java: #e0610e;
+      --accent-python: #38bdf8;
+      --border-color: #e2e8f0;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg-main);
+      color: var(--text-main);
+      line-height: 1.5;
+    }
+
+    /* NUOVO HEADER HIGH-TECH E PROFESSIONALE */
+    header {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      color: white;
+      padding: 80px 20px;
+      border-bottom: 4px solid #3b82f6;
+    }
+
+    .header-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    .badge-accenture {
+      display: inline-block;
+      background: rgba(168, 85, 247, 0.2);
+      color: #c084fc;
+      border: 1px solid rgba(168, 85, 247, 0.4);
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 16px;
+    }
+
+    header h1 {
+      font-size: 48px;
+      font-weight: 800;
+      letter-spacing: -1px;
+      line-height: 1.1;
+      margin-bottom: 8px;
+      background: linear-gradient(to right, #ffffff, #cbd5e1);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .subtitle {
+      font-size: 20px;
+      color: #94a3b8;
+      font-weight: 400;
+      margin-bottom: 24px;
+    }
+
+    .skills-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .skill-tag {
+      background: rgba(255, 255, 255, 0.08);
+      color: #e2e8f0;
+      padding: 6px 14px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 500;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    /* CONTENITORE PROGETTI */
+    .container {
+      max-width: 1000px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
+    .section-title {
+      font-size: 22px;
+      font-weight: 700;
+      color: #1e293b;
+      margin-top: 40px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .section-title::after {
+      content: "";
+      flex-grow: 1;
+      height: 1px;
+      background-color: var(--border-color);
+    }
+
+    /* CARDS LAYOUT */
+    .project-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 30px;
+      margin-bottom: 24px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+      transition: all 0.25s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 20px -8px rgba(0, 0, 0, 0.1);
+      border-color: #cbd5e1;
+    }
+
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 12px;
+    }
+
+    .card-header h3 {
+      font-size: 22px;
+      font-weight: 700;
+      color: #0f172a;
+    }
+
+    .lang-badge {
+      font-size: 11px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 6px;
+      text-transform: uppercase;
+    }
+
+    .lang-badge.java {
+      background: #fff3eb;
+      color: var(--accent-java);
+      border: 1px solid #ffe4d1;
+    }
+
+    .lang-badge.python {
+      background: #f0f9ff;
+      color: #0369a1;
+      border: 1px solid #e0f2fe;
+    }
+
+    .project-card p {
+      color: var(--text-muted);
+      font-size: 15px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    /* TECH STACK MINI TAGS */
+    .tech-used {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 24px;
+    }
+
+    .tech-tag {
+      background: #f1f5f9;
+      color: #64748b;
+      font-size: 12px;
+      padding: 4px 10px;
+      border-radius: 4px;
+      font-weight: 500;
+    }
+
+    /* BOTTONI */
+    .btn-group {
+      display: flex;
+      gap: 12px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      padding: 10px 18px;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: all 0.2s ease;
+    }
+
+    .btn-primary {
+      background: #0f172a;
+      color: white;
+      border: 1px solid #0f172a;
+    }
+
+    .btn-primary:hover {
+      background: #1e293b;
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: #475569;
+      border: 1px solid #cbd5e1;
+    }
+
+    .btn-secondary:hover {
+      background: #f8fafc;
+      color: #0f172a;
+      border-color: #94a3b8;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      margin-top: 80px;
+      border-top: 1px solid var(--border-color);
+      font-size: 13px;
+      color: #94a3b8;
+    }
+
+    @media (max-width: 768px) {
+      header h1 { font-size: 36px; }
+      .card-header { flex-direction: column; gap: 8px; }
+      .btn-group { flex-direction: column; }
+      .btn { text-align: center; justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-container">
+      <div class="badge-accenture">Senior Software Engineer</div>
+      <h1>Roberta Coluzza</h1>
+      <p class="subtitle">Sviluppo software enterprise con focus su architetture robuste, codice pulito ed evoluzione tecnologica.</p>
+      
+      <div class="skills-tags">
+        <span class="skill-tag">Java 21 / Spring Boot 3</span>
+        <span class="skill-tag">Python (Learning)</span>
+        <span class="skill-tag">Enterprise Integrations</span>
+        <span class="skill-tag">Microservizi & REST API & Web Services</span>
+        <span class="skill-tag">MySQL / SQL Server</span>
+        <span class="skill-tag">Mongo DB (Learning)</span>
+        <span class="skill-tag">AWS (Learning)</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+
+    <div class="section-title">Java Enterprise Solutions</div>
+
+    <!-- <div class="project-card">
+      <div class="card-header">
+        <h3>Gestione Pasti Bambini</h3>
+        <span class="lang-badge java">Java 21</span>
+      </div>
+      <p>
+        Un'applicazione web nata per risolvere un problema logistico quotidiano dei genitori: il tracciamento e bilanciamento dei nutrienti dei pasti scolastici e casalinghi dei bambini. Sviluppata superando i vincoli delle tecnologie legacy commerciali a favore di uno stack moderno, asincrono e performante.
+      </p>
+      <div class="tech-used">
+        <span class="tech-tag">Spring Boot</span>
+        <span class="tech-tag">Spring Data JPA</span>
+        <span class="tech-tag">Thymeleaf</span>
+        <span class="tech-tag">PostgreSQL</span>
+        <span class="tech-tag">Docker</span>
+      </div>
+      <div class="btn-group">
+        <a class="btn btn-primary" href="https://github.com/robertacoluzza/portfolio/tree/main/Java">
+          Sorgenti GitHub
+        </a>
+        <a class="btn btn-secondary" href="#" onclick="alert('L\'applicazione sarà presto live su Render!'); return false;">
+          Esplora la Live Demo ↗
+        </a>
+      </div>
+    </div> -->
+
+    <div class="section-title">Python Core Lab</div>
+
+    <!-- <div class="project-card">
+      <div class="card-header">
+        <h3>Number Guessing Game & Algoritmi Core</h3>
+        <span class="lang-badge python">Python 3</span>
+      </div>
+      <p>
+        Repository dedicato al consolidamento della sintassi e dei paradigmi di programmazione in ambiente Python (FreeCodeCamp challenge). Raccolta di script focalizzati sulla manipolazione dei dati, gestione dei flussi di input/output e logica algoritmica pulita senza l'utilizzo di framework complessi.
+      </p>
+      <div class="tech-used">
+        <span class="tech-tag">Python 3.x</span>
+        <span class="tech-tag">CLI Development</span>
+        <span class="tech-tag">Algorithm Design</span>
+      </div>
+      <div class="btn-group">
+        <a class="btn btn-primary" href="https://github.com/robertacoluzza/portfolio/tree/main/Python">
+          Sorgenti GitHub
+        </a>
+      </div>
+    </div> -->
+
+  </div>
+
+  <footer>
+    &copy; 2026 Roberta Coluzza &bull; Sviluppato con orgoglio per il proprio portfolio personale.
+  </footer>
+
+</body>
+</html>
